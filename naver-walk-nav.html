@@ -7,7 +7,15 @@
 
 <title>NavWalk - Naver Map Walking Route</title>
 
-<script src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=6cm1gapanx&submodules=geocoder" type="text/javascript"></script>
+<script src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=6cm1gapanx&submodules=geocoder&callback=initMap"></script>
+
+<script>
+function initMap() {
+  var map = new naver.maps.Map('map', {
+    center: new naver.maps.LatLng(37.5665, 126.9780),
+    zoom: 14
+  });
+}
 
 <style>
 
